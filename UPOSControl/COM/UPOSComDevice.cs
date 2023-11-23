@@ -93,7 +93,7 @@ namespace UPOSControl.COM
 
             if (inputData)
             {
-                PortName = SetPortName("COM1");
+                PortName = SetPortName("");
                 BaudRate = SetPortBaudRate(9600);
                 Parity = SetPortParity(Parity.None);
                 DataBits = SetPortDataBits(8);

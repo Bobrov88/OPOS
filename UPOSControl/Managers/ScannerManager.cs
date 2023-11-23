@@ -263,8 +263,10 @@ namespace UPOSControl.Managers
             }
             */
             //  _searchDevicesTimer.Enabled = true;
-         //   Console.WriteLine("266");
-            await CheckComDevices();
+            //   Console.WriteLine("266");
+            string str = Console.ReadLine();
+            string[] serials = { str };
+            await CheckComDevices(serials);
             await CheckUsbDevices();
         }
 
@@ -272,10 +274,12 @@ namespace UPOSControl.Managers
         /// Проверка COM устройств
         /// Проверяет только новые порты
         /// </summary>
-        private async System.Threading.Tasks.Task CheckComDevices()
+        private async System.Threading.Tasks.Task CheckComDevices(string[] serials)
         {
             //  string[] serials = SerialPort.GetPortNames();
-            string[] serials = { "COM4" };
+           // Console.WriteLine("Enter comport >>>");
+           // string str = Console.ReadLine();
+          //  string[] serials = { str };
        //     Console.WriteLine("278 " + serials[0]);
        //     Console.WriteLine("279 " + serials[1]);
          //   Console.WriteLine("280 " + serials[2]);
